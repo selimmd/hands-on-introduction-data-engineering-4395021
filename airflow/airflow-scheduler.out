@@ -1,0 +1,47 @@
+[[34m2024-03-09T22:39:12.373+0000[0m] {[34mscheduler_job_runner.py:[0m788} INFO[0m - Starting the scheduler[0m
+[[34m2024-03-09T22:39:12.378+0000[0m] {[34mscheduler_job_runner.py:[0m795} INFO[0m - Processing each file at most -1 times[0m
+[[34m2024-03-09T22:39:12.390+0000[0m] {[34mmanager.py:[0m165} INFO[0m - Launched DagFileProcessorManager with pid: 3190[0m
+[[34m2024-03-09T22:39:12.392+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T22:39:12.409+0000[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2024-03-09T22:39:12.442+0000] {manager.py:411} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2024-03-09T22:39:48.188+0000[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: two_task_dag.bash_task_0 manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>[0m
+[[34m2024-03-09T22:39:48.188+0000[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG two_task_dag has 0/16 running and queued tasks[0m
+[[34m2024-03-09T22:39:48.188+0000[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: two_task_dag.bash_task_0 manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>[0m
+[[34m2024-03-09T22:39:48.191+0000[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='two_task_dag', task_id='bash_task_0', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-03-09T22:39:48.191+0000[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'two_task_dag', 'bash_task_0', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py'][0m
+[[34m2024-03-09T22:39:48.218+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'two_task_dag', 'bash_task_0', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py'][0m
+[[34m2024-03-09T22:39:49.229+0000[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /workspaces/hands-on-introduction-data-engineering-4395021/airflow/dags/two_task_dag.py[0m
+[[34m2024-03-09T22:39:49.811+0000[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: two_task_dag.bash_task_0 manual__2024-03-09T22:39:46.992426+00:00 [queued]> on host codespaces-6fc734[0m
+[[34m2024-03-09T22:39:50.492+0000[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='two_task_dag', task_id='bash_task_0', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-09T22:39:50.497+0000[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=two_task_dag, task_id=bash_task_0, run_id=manual__2024-03-09T22:39:46.992426+00:00, map_index=-1, run_start_date=2024-03-09 22:39:49.878710+00:00, run_end_date=2024-03-09 22:39:50.128967+00:00, run_duration=0.250257, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-03-09 22:39:48.189371+00:00, queued_by_job_id=2, pid=3438[0m
+[[34m2024-03-09T22:39:50.606+0000[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: two_task_dag.one_task manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>[0m
+[[34m2024-03-09T22:39:50.606+0000[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG two_task_dag has 0/16 running and queued tasks[0m
+[[34m2024-03-09T22:39:50.607+0000[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: two_task_dag.one_task manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>[0m
+[[34m2024-03-09T22:39:50.612+0000[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='two_task_dag', task_id='one_task', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-09T22:39:50.612+0000[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'two_task_dag', 'one_task', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py'][0m
+[[34m2024-03-09T22:39:50.640+0000[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'two_task_dag', 'one_task', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py'][0m
+[[34m2024-03-09T22:39:51.574+0000[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /workspaces/hands-on-introduction-data-engineering-4395021/airflow/dags/two_task_dag.py[0m
+[[34m2024-03-09T22:39:52.113+0000[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: two_task_dag.one_task manual__2024-03-09T22:39:46.992426+00:00 [queued]> on host codespaces-6fc734[0m
+[[34m2024-03-09T22:39:57.788+0000[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='two_task_dag', task_id='one_task', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-09T22:39:57.792+0000[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=two_task_dag, task_id=one_task, run_id=manual__2024-03-09T22:39:46.992426+00:00, map_index=-1, run_start_date=2024-03-09 22:39:52.178796+00:00, run_end_date=2024-03-09 22:39:57.428225+00:00, run_duration=5.249429, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-09 22:39:50.609546+00:00, queued_by_job_id=2, pid=3465[0m
+[[34m2024-03-09T22:39:57.862+0000[0m] {[34mdagrun.py:[0m630} INFO[0m - Marking run <DagRun two_task_dag @ 2024-03-09 22:39:46.992426+00:00: manual__2024-03-09T22:39:46.992426+00:00, state:running, queued_at: 2024-03-09 22:39:47.049817+00:00. externally triggered: True> successful[0m
+[[34m2024-03-09T22:39:57.863+0000[0m] {[34mdagrun.py:[0m681} INFO[0m - DagRun Finished: dag_id=two_task_dag, execution_date=2024-03-09 22:39:46.992426+00:00, run_id=manual__2024-03-09T22:39:46.992426+00:00, run_start_date=2024-03-09 22:39:47.779972+00:00, run_end_date=2024-03-09 22:39:57.863016+00:00, run_duration=10.083044, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-09 22:39:46.992426+00:00, data_interval_end=2024-03-09 22:39:46.992426+00:00, dag_hash=9c02f82e69e1ea25354cf08748920e85[0m
+[[34m2024-03-09T22:44:12.993+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T22:49:13.033+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T22:54:13.063+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T22:59:13.093+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T23:04:13.122+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T23:09:13.150+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T23:14:13.178+0000[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-09T23:14:58.766+0000[0m] {[34mscheduler_job_runner.py:[0m247} INFO[0m - Exiting gracefully upon receiving signal 15[0m
+[[34m2024-03-09T23:14:59.772+0000[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending Signals.SIGTERM to group 3190. PIDs of all processes in the group: [3190][0m
+[[34m2024-03-09T23:14:59.773+0000[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal Signals.SIGTERM to group 3190[0m
+[[34m2024-03-09T23:15:00.887+0000[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=3190, status='terminated', exitcode=0, started='22:39:11') (3190) terminated with exit code 0[0m
+[[34m2024-03-09T23:15:00.891+0000[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending Signals.SIGTERM to group 3190. PIDs of all processes in the group: [][0m
+[[34m2024-03-09T23:15:00.891+0000[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal Signals.SIGTERM to group 3190[0m
+[[34m2024-03-09T23:15:00.892+0000[0m] {[34mprocess_utils.py:[0m100} INFO[0m - Sending the signal Signals.SIGTERM to process 3190 as process group is missing.[0m
+[[34m2024-03-09T23:15:00.892+0000[0m] {[34mscheduler_job_runner.py:[0m864} INFO[0m - Exited execute loop[0m

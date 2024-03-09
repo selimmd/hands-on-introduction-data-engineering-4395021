@@ -1,0 +1,56 @@
+2024-03-07 18:26:44,755 INFO - Starting the scheduler
+2024-03-07 18:26:44,756 INFO - Processing each file at most -1 times
+2024-03-07 18:26:44,762 INFO - Launched DagFileProcessorManager with pid: 4892
+2024-03-07 18:26:44,763 INFO - Resetting orphaned tasks for active dag runs
+2024-03-07 18:26:44,768 INFO - Configured default timezone Timezone('UTC')
+2024-03-07 18:31:45,209 INFO - Resetting orphaned tasks for active dag runs
+2024-03-07 18:35:35,841 INFO - Exiting gracefully upon receiving signal 15
+2024-03-07 18:35:36,844 INFO - Sending Signals.SIGTERM to group 4892. PIDs of all processes in the group: [4892]
+2024-03-07 18:35:36,845 INFO - Sending the signal Signals.SIGTERM to group 4892
+2024-03-07 18:35:37,105 INFO - Process psutil.Process(pid=4892, status='terminated', exitcode=0, started='18:26:43') (4892) terminated with exit code 0
+2024-03-07 18:35:37,107 INFO - Sending Signals.SIGTERM to group 4892. PIDs of all processes in the group: []
+2024-03-07 18:35:37,108 INFO - Sending the signal Signals.SIGTERM to group 4892
+2024-03-07 18:35:37,108 INFO - Sending the signal Signals.SIGTERM to process 4892 as process group is missing.
+2024-03-07 18:35:37,109 INFO - Exited execute loop
+2024-03-09 22:39:12,373 INFO - Starting the scheduler
+2024-03-09 22:39:12,378 INFO - Processing each file at most -1 times
+2024-03-09 22:39:12,390 INFO - Launched DagFileProcessorManager with pid: 3190
+2024-03-09 22:39:12,392 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 22:39:12,409 INFO - Configured default timezone Timezone('UTC')
+2024-03-09 22:39:48,188 INFO - 1 tasks up for execution:
+	<TaskInstance: two_task_dag.bash_task_0 manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>
+2024-03-09 22:39:48,188 INFO - DAG two_task_dag has 0/16 running and queued tasks
+2024-03-09 22:39:48,188 INFO - Setting the following tasks to queued state:
+	<TaskInstance: two_task_dag.bash_task_0 manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>
+2024-03-09 22:39:48,191 INFO - Sending TaskInstanceKey(dag_id='two_task_dag', task_id='bash_task_0', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-09 22:39:48,191 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'two_task_dag', 'bash_task_0', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py']
+2024-03-09 22:39:48,218 INFO - Executing command: ['airflow', 'tasks', 'run', 'two_task_dag', 'bash_task_0', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py']
+2024-03-09 22:39:50,492 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='two_task_dag', task_id='bash_task_0', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1)
+2024-03-09 22:39:50,497 INFO - TaskInstance Finished: dag_id=two_task_dag, task_id=bash_task_0, run_id=manual__2024-03-09T22:39:46.992426+00:00, map_index=-1, run_start_date=2024-03-09 22:39:49.878710+00:00, run_end_date=2024-03-09 22:39:50.128967+00:00, run_duration=0.250257, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-03-09 22:39:48.189371+00:00, queued_by_job_id=2, pid=3438
+2024-03-09 22:39:50,606 INFO - 1 tasks up for execution:
+	<TaskInstance: two_task_dag.one_task manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>
+2024-03-09 22:39:50,606 INFO - DAG two_task_dag has 0/16 running and queued tasks
+2024-03-09 22:39:50,607 INFO - Setting the following tasks to queued state:
+	<TaskInstance: two_task_dag.one_task manual__2024-03-09T22:39:46.992426+00:00 [scheduled]>
+2024-03-09 22:39:50,612 INFO - Sending TaskInstanceKey(dag_id='two_task_dag', task_id='one_task', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-09 22:39:50,612 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'two_task_dag', 'one_task', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py']
+2024-03-09 22:39:50,640 INFO - Executing command: ['airflow', 'tasks', 'run', 'two_task_dag', 'one_task', 'manual__2024-03-09T22:39:46.992426+00:00', '--local', '--subdir', 'DAGS_FOLDER/two_task_dag.py']
+2024-03-09 22:39:57,788 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='two_task_dag', task_id='one_task', run_id='manual__2024-03-09T22:39:46.992426+00:00', try_number=1, map_index=-1)
+2024-03-09 22:39:57,792 INFO - TaskInstance Finished: dag_id=two_task_dag, task_id=one_task, run_id=manual__2024-03-09T22:39:46.992426+00:00, map_index=-1, run_start_date=2024-03-09 22:39:52.178796+00:00, run_end_date=2024-03-09 22:39:57.428225+00:00, run_duration=5.249429, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-09 22:39:50.609546+00:00, queued_by_job_id=2, pid=3465
+2024-03-09 22:39:57,862 INFO - Marking run <DagRun two_task_dag @ 2024-03-09 22:39:46.992426+00:00: manual__2024-03-09T22:39:46.992426+00:00, state:running, queued_at: 2024-03-09 22:39:47.049817+00:00. externally triggered: True> successful
+2024-03-09 22:39:57,863 INFO - DagRun Finished: dag_id=two_task_dag, execution_date=2024-03-09 22:39:46.992426+00:00, run_id=manual__2024-03-09T22:39:46.992426+00:00, run_start_date=2024-03-09 22:39:47.779972+00:00, run_end_date=2024-03-09 22:39:57.863016+00:00, run_duration=10.083044, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-09 22:39:46.992426+00:00, data_interval_end=2024-03-09 22:39:46.992426+00:00, dag_hash=9c02f82e69e1ea25354cf08748920e85
+2024-03-09 22:44:12,993 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 22:49:13,033 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 22:54:13,063 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 22:59:13,093 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 23:04:13,122 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 23:09:13,150 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 23:14:13,178 INFO - Resetting orphaned tasks for active dag runs
+2024-03-09 23:14:58,766 INFO - Exiting gracefully upon receiving signal 15
+2024-03-09 23:14:59,772 INFO - Sending Signals.SIGTERM to group 3190. PIDs of all processes in the group: [3190]
+2024-03-09 23:14:59,773 INFO - Sending the signal Signals.SIGTERM to group 3190
+2024-03-09 23:15:00,887 INFO - Process psutil.Process(pid=3190, status='terminated', exitcode=0, started='22:39:11') (3190) terminated with exit code 0
+2024-03-09 23:15:00,891 INFO - Sending Signals.SIGTERM to group 3190. PIDs of all processes in the group: []
+2024-03-09 23:15:00,891 INFO - Sending the signal Signals.SIGTERM to group 3190
+2024-03-09 23:15:00,892 INFO - Sending the signal Signals.SIGTERM to process 3190 as process group is missing.
+2024-03-09 23:15:00,892 INFO - Exited execute loop
